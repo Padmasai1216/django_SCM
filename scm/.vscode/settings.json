@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8e520a78-d8c7-4974-93e6-d1e8204583d5/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/colatia",
+    "appService.deploySubpath": "."
+}

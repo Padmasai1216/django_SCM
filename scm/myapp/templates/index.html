@@ -1,0 +1,69 @@
+{% load static %}
+{% include 'base.html' %}
+{% block style %}
+<style>
+    body {
+        background-color: rgb(205, 219, 2);
+        font-family: montserrat;
+        color: black;
+    }
+
+    .card {
+        max-width: 350px;
+        min-height: 300px;
+        background-color: rgb(51, 51, 51);
+        border-radius: 30px;
+        text-align: center;
+        color: white;
+        margin-left: 37%;
+        margin-top: 5%;
+        padding: 2%;
+    }
+
+    input {
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        padding: 16px 32px;
+        width: 75%;
+
+    }
+
+    input ::placeholder {
+        font-family: quicksand;
+    }
+
+    button {
+        padding: 8px 12px;
+        width: 150px;
+        background-color: yellow;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<h1 align=center>welcome to SCM</h1>
+<div class="card" align=center>
+    <h3>Login</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="USERNAME" name="username" required><br>
+        <input type="password" placeholder="PASSWORD" name="password" required><br><br><br>
+        <button type="submit">LOGIN</button><br><br>
+    </form>
+    <a>Forgot password</a> | &nbsp; <a href="/register">Register here !</a>
+</div>
+{% endblock %}

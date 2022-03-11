@@ -1,0 +1,141 @@
+{% load static %}
+{% include 'base.html' %}
+{% block style %}
+<style>
+    body {
+        font-family: montserrat;
+        color: firebrick;
+        background-color: cyan;
+    }
+
+    .card {
+        min-width: 300px;
+        min-height: 300px;
+        background-color: aliceblue;
+        border-radius: 30px;
+        text-align: center;
+        color: black;
+        margin: 20px;
+        padding: 2%;
+    }
+
+    input {
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        padding: 16px 32px;
+        width: 75%;
+
+    }
+
+    h3,
+    p {
+        font-family: 'Montserrat';
+    }
+
+    .hello {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    input ::placeholder {
+        font-family: quicksand;
+    }
+
+    button {
+        padding: 8px 12px;
+        width: 150px;
+        background-color: yellow;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<h2 align=center>Hi Miss.Padma here are your orders !! </h2>
+<p><b>HAVE A LOOK !!</b></p>
+<!-- <img src={% static "media/scm.jpg" %} style="height: 100%; width: 100%;" class="img"> -->
+<div class="hello">
+    <!-- col start -->
+    <div class="col">
+        <div class="column">
+            <div class="card">
+                <h3>ENERGY </h3>
+                <p>ordered from XYZ company</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>PACKING MATERIAL </h3>
+                <p>ordered from ABC company</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>SUGAR</h3>
+                <p>ordered from PQR company</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+    </div>
+    <!-- col end -->
+
+    <!-- col start -->
+    <div class="col">
+        <div class="column">
+            <div class="card">
+                <h3>CARBOHYDRATES </h3>
+                <p>ordered from AEC company</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>PROTEIN </h3>
+                <p>ordered from PLA company</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>FAT</h3>
+                <p>ordered from GHK company</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+    </div>
+    <!-- col end -->
+</div>
+{% endblock %}

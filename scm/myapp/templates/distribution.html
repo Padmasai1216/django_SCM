@@ -1,0 +1,124 @@
+{% load static %}
+{% include 'base.html' %}
+{% block style %}
+<style>
+    body {
+        font-family: montserrat;
+        color: firebrick;
+        background-color: cyan;
+    }
+
+    .card {
+        min-width: 300px;
+        min-height: 300px;
+        background-color: aliceblue;
+        border-radius: 30px;
+        text-align: center;
+        color: black;
+        margin: 20px;
+        padding: 2%;
+    }
+
+    input {
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        padding: 16px 32px;
+        width: 75%;
+
+    }
+
+    h3,
+    p {
+        font-family: 'Montserrat';
+    }
+
+    .hello {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    input ::placeholder {
+        font-family: quicksand;
+    }
+
+    button {
+        padding: 8px 12px;
+        width: 150px;
+        background-color: yellow;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<h2 align=center>HI PADMA ! SEE YOUR DISTRIBUTIONS HERE !!</h2>
+<div class="hello">
+    <!-- col start -->
+    <div class="col">
+        <div class="column">
+            <div class="card">
+                <h3><b>RAJAMUNDRY</b></h3>
+                <p>2 trucks departed</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3><b>TIRUPATHI</b></h3>
+                <p>3 trucks departed</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3><b>HYDERABAD</b></h3>
+                <p>2 trucks departed</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+    </div>
+    <!-- col end -->
+    <div class="col">
+        <div class="column">
+            <div class="card">
+                <h3><b>ELLURU</b></h3>
+                <p>5 trucks departed</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3><b>VIJAYAWADA</b></h3>
+                <p>5 trucks departed</p>
+                <br><br>
+                <button>Track order</button><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

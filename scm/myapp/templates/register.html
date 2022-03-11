@@ -1,0 +1,108 @@
+{% load static %}
+{% include 'base.html' %}
+{% block style %}
+
+<style>
+    body {
+        background-color: rgb(205, 219, 2);
+        font-family: montserrat;
+        color: black;
+    }
+
+    .card {
+        max-width: 400px;
+        min-height: 300px;
+        background-color: rgb(51, 51, 51);
+        border-radius: 30px;
+        text-align: center;
+        color: white;
+        margin-left: 37%;
+        margin-top: 5%;
+        padding: 2%;
+    }
+
+    input {
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        padding: 16px 32px;
+        width: 300px;
+
+    }
+
+    input ::placeholder {
+        font-family: quicksand;
+    }
+
+    button {
+        padding: 8px 12px;
+        width: 150px;
+        background-color: yellow;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    td {
+        color: white;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<h1 align=center>welcome to SCM</h1>
+<!-- <img src={% static "media/scm.jpg" %} style="height: 100%; width: 100%;" class="img"> -->
+<div class="card" align=center>
+    <h3>Registration</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Username: &emsp;</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>Email: &emsp;</td>
+                <td>{{ form.email }}</td>
+            </tr>
+            <tr>
+                <td>Password: &emsp;</td>
+                <td>{{ form.password1 }}</td>
+            </tr>
+            <tr>
+                <td>Confirm<br>Password: &emsp;</td>
+                <td>{{ form.password2 }}</td>
+            </tr>
+        </table>
+        <br>
+        <button id="sbmt" type="button">Register Now</button>
+    </form>
+    <a href="/login">login here !</a>
+</div>
+<script>
+    var sbmt = document.getElementById("sbmt");
+    var form = document.getElementsByTagName("form")[0];
+    sbmt.addEventListener("click", (e) => {
+        var p1 = document.getElementsByName("password1").value;
+        var p2 = document.getElementsByName("password2").value;
+        if (p1 != p2) {
+            window.alert("Passwords doesn't match")
+            e.preventDefault();
+        }
+        else {
+            form.submit();
+        }
+    })
+
+</script>
+{% endblock %}

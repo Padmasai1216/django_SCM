@@ -1,0 +1,66 @@
+{% load static %}
+{% include 'base.html' %}
+
+{% block content %}
+<img src={% static "media/cc_logo.png" %} style="height:30%; width: 70%; margin-top: 100px;" class="img">
+<h1 style="text-align: center; font-family: Monsterrat;">Consumer Relations</h1>
+<h3 style="text-align: center; font-size: 25px;font-weight: 50;">We value our customers and the communities we call
+  home.
+  We appreciate your questions, comments and feedback so we can better serve you.</h3>
+
+<br>
+<br>
+
+<div id="'content">
+  <img src={% static "media/contacting.jpg" %} alt="it is a calling symbol" width="600px" height="400">
+  <h1 style="text-align: center; font-family: Monsterrat;">Media</h1>
+  <h3 style="text-align: center; font-size: 25px;font-weight: 50;">
+    Press releases and company statements can be found in the Media Center.
+    If you are a media representative and cannot find the information you need on this website,
+    you may wish to contact one of our media relations professionals.</h3>
+</div>
+
+<a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+<a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+<a href="https://www.Twitter.com" target="_blank" class="fa fa-twitter"></a>
+<a href="https://www.youtube.com" target="_blank" class="fa fa-youtube"></a>
+{% endblock %}
+{% block style %}
+<style>
+  body {
+    background-color: greenyellow;
+  }
+
+  #content img {
+    float: left;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  /* Set a specific color for each brand */
+
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+</style>
+{% endblock %}
